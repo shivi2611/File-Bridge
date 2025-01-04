@@ -1,10 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import App from "./App";
+import DownloadPage from "./DownloadPage";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// Ensure this code is only called once
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <React.StrictMode>
+    <Router>
+      <Routes>
+        {/* Route for file upload page */}
+        <Route path="/" element={<App />} />
+
+        {/* Route for download page */}
+        <Route path="/download/:sessionId" element={<DownloadPage />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
+);
