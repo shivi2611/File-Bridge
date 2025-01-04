@@ -68,6 +68,7 @@ This project is a peer-to-peer file-sharing application built using the MERN sta
 ## Future Enhancements
 - Deploy the application to a cloud platform for public access.
 - Implement additional security features like encrypted file transfer.
+- Include a file download progress diaplay bar.
 
 ## Contact
 For any queries or collaboration opportunities, feel free to reach out:
